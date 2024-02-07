@@ -10,6 +10,7 @@ from langchain.memory import ConversationBufferMemory
 from langchain.document_loaders import PyPDFLoader
 import os
 import tempfile
+import chromadb
 
 
 
