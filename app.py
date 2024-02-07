@@ -6,7 +6,7 @@ from langchain.chains import ConversationalRetrievalChain
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.llms import LlamaCpp
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.vectorstores.Chroma import Chroma
+from langchain.vectorstores import Chroma
 from langchain.vectorstores import FAISS
 from langchain.memory import ConversationBufferMemory
 from langchain.document_loaders import PyPDFLoader
@@ -57,7 +57,7 @@ def create_conversational_chain(vector_store):
     # Create llm
     llm = LlamaCpp(
     streaming = True,
-    model_path="mistral-7b-instruct-v0.1.Q4_K_M.gguf",
+    model_path="llama-2-7b-chat.Q4_K_M.gguf",
     temperature=0.75,
     top_p=1, 
     verbose=True,
