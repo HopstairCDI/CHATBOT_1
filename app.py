@@ -17,7 +17,7 @@ import tempfile
 from langchain.chains.question_answering import load_qa_chain
 from langchain import HuggingFaceHub
 from langchain import PromptTemplate, HuggingFaceHub, LLMChain
-from langchain_community.llms.HuggingFaceHub import HuggingFaceHub
+from langchain_community.llms import PromptTemplate, HuggingFaceHub, LLMChain
 
 
 
