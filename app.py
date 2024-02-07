@@ -110,7 +110,7 @@ def main():
         
         embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
         # Create vector store
-        vector_store = chroma.from_documents(text_chunks, embeddings)
+        vector_store = Chroma.from_documents(text_chunks, embeddings)
 
         # Create the chain object
         chain = create_conversational_chain(vector_store)
