@@ -13,6 +13,9 @@ from langchain.memory import ConversationBufferMemory
 from langchain.document_loaders import PyPDFLoader
 import os
 import tempfile
+from langchain.chains.question_answering import load_qa_chain
+from langchain import HuggingFaceHub
+from langchain import PromptTemplate, HuggingFaceHub, LLMChain
 
 
 
@@ -55,14 +58,16 @@ def display_chat_history(chain):
                 message(st.session_state["generated"][i], key=str(i), avatar_style="fun-emoji")
 
 def create_conversational_chain(vector_store):
-    # Create llm
-    llm = LlamaCpp(
-    streaming = True,
-    model_path="mistral-7b-instruct-v0.1.Q4_K_M.gguf",
-    temperature=0.75,
-    top_p=1, 
-    verbose=True,
-    n_ctx=4096
+    template = """Question: {question}
+
+        Answer: Let's think step by step."""
+
+    prompt = PromptTemplate(template=template, input_variables=["question"])
+    llm_chain = LLMChain(prompt=prompt, 
+                     llm=HuggingFaceHub(repo_id="google/flan-t5-xl", 
+                                        model_kwargs={"temperature":0, 
+                                                      "max_length":64}))
+   
 )
     
     memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
