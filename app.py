@@ -13,7 +13,6 @@ import tempfile
 
 
 
-
 def initialize_session_state():
     if 'history' not in st.session_state:
         st.session_state['history'] = []
@@ -69,12 +68,11 @@ def create_conversational_chain(vector_store):
                                                  memory=memory)
     return chain
     
-
-    
+ 
 def main():
     # Initialize session state
     initialize_session_state()
-    st.title("AI Buddy - Your Personal Advisor ")
+    st.title("Hopstair's AI Buddy - Your Personal Advisor ")
     # Initialize Streamlit
     st.sidebar.title("Document Processing")
     uploaded_files = st.sidebar.file_uploader("Upload files", accept_multiple_files=True)
