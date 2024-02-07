@@ -1,4 +1,4 @@
-langchain
+langchain== 0.1.5
 torch
 accelerate
 sentence_transformers
@@ -9,5 +9,8 @@ tiktoken
 huggingface-hub
 pypdf
 llama-cpp-python
-
+langchain-community== 0.0.18
+langchain-core== 0.1.19
+langcodes== 3.3.0
+langsmith==0.0.87
 
