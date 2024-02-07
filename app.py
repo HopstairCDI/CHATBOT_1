@@ -1,4 +1,4 @@
-import chromadb
+
 import streamlit as st
 from streamlit_chat import message
 from langchain.chains import ConversationalRetrievalChain
@@ -100,9 +100,9 @@ def main():
         text_chunks = text_splitter.split_documents(text)
         
 
-        
 
         # Create embeddings
+        os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
         embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2", 
                                            model_kwargs={'device': 'cpu'})
 
