@@ -68,9 +68,10 @@ def create_conversational_chain(vector_store):
                                                  retriever=vector_store.as_retriever(search_kwargs={"k": 2}),
                                                  memory=memory)
     return chain
-def split_docs(documents,chunk_size=1000,chunk_overlap=20):
+    
+def split_docs(text,chunk_size=1000,chunk_overlap=20):
           text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
-          docs = text_splitter.split_documents(documents)
+          docs = text_splitter.split_documents(text)
           return docs
     
 def main():
