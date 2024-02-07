@@ -108,7 +108,7 @@ def main():
                                            model_kwargs={'device': 'cpu'})
 
         # Create vector store
-        vector_store = Chroma.from_documents(text_chunks, embeddings)
+        vector_store = chroma.from_documents(text_chunks, embeddings)
 
         # Create the chain object
         chain = create_conversational_chain(vector_store)
