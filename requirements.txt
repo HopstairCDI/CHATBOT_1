@@ -2,12 +2,12 @@ langchain>=0.1.5
 torch
 accelerate
 sentence_transformers
-streamlit_chat
-streamlit
+streamlit_chat== 0.1.1
+streamlit==1.31.0
 faiss-cpu
-tiktoken
-huggingface-hub
+tiktoken==0.5.2
+huggingface-hub==0.20.3
 pypdf
-llama-cpp-python > 0.1.53
+llama-cpp-python==0.1.14
 
 
