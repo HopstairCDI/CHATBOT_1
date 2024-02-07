@@ -1,4 +1,4 @@
-langchain
+langchain>=0.1.5
 torch
 accelerate
 sentence_transformers
