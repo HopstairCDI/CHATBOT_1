@@ -103,10 +103,11 @@ def main():
 
 
         # Create embeddings
-        os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
-        embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2", 
-                                           model_kwargs={'device': 'cpu'})
-
+        #os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+        #embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2", 
+                                           #model_kwargs={'device': 'cpu'})
+        
+        embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
         # Create vector store
         vector_store = Chroma.from_documents(text_chunks, embeddings)
 
