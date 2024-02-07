@@ -69,10 +69,7 @@ def create_conversational_chain(vector_store):
                                                  memory=memory)
     return chain
     
-def split_docs(text,chunk_size=1000,chunk_overlap=20):
-          text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
-          docs = text_splitter.split_documents(text)
-          return docs
+
     
 def main():
     # Initialize session state
@@ -99,11 +96,11 @@ def main():
                 text.extend(loader.load())
                 os.remove(temp_file_path)
 
-        #text_splitter = RecursiveCharacterTextSplitter(chunk_size=10000, chunk_overlap=20)
-        #text_chunks = text_splitter.split_documents(text)
+        text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=20)
+        text_chunks = text_splitter.split_documents(text)
         
 
-        docs = split_docs(documents)
+        
 
         # Create embeddings
         embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2", 
