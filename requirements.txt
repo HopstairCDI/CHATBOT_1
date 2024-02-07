@@ -1,6 +1,6 @@
 langchain>=0.1.5
-torch
-accelerate
+torch==2.1.0+cu121
+accelerate==0.26.1
 sentence_transformers
 streamlit_chat== 0.1.1
 streamlit==1.31.0
