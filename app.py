@@ -68,7 +68,7 @@ def create_conversational_chain(vector_store):
                                         model_kwargs={"temperature":0, 
                                                       "max_length":64}))
    
-)
+
     
     memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
 
