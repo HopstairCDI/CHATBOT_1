@@ -57,7 +57,7 @@ def create_conversational_chain(vector_store):
     # Create llm
     llm = LlamaCpp(
     streaming = True,
-    model_path="llama-2-7b-chat.Q4_K_M.gguf",
+    model_path="mistral-7b-instruct-v0.1.Q4_K_M.gguf",
     temperature=0.75,
     top_p=1, 
     verbose=True,
@@ -77,7 +77,7 @@ def main():
     initialize_session_state()
     st.title("Hopstair's AI Buddy - Your Personal Advisor ")
     # Initialize Streamlit
-    st.sidebar.title("Document Processing")
+    st.sidebar.title("Hopstair AI Buddy")
     uploaded_files = st.sidebar.file_uploader("Upload files", accept_multiple_files=True)
 
 
