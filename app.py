@@ -1,7 +1,6 @@
 import streamlit as st
 from langchain.embeddings import SentenceTransformerEmbeddings
 from streamlit_chat import message
-langchain_community.llms.HuggingFaceHub
 from langchain.chains import ConversationalRetrievalChain
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.llms import LlamaCpp
