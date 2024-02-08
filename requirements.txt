@@ -1,4 +1,4 @@
-#chromadb==0.4.22
+
 langchain
 torch
 accelerate
@@ -10,7 +10,7 @@ tiktoken
 huggingface-hub
 pypdf
 llama-cpp-python
-#Chroma==0.2.0
 
-#chroma-hnswlib==0.7.3
+
+
 
