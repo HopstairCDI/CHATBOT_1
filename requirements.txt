@@ -3,9 +3,9 @@ langchain
 torch 
 sentence_transformers
 streamlit_chat == 0.1.1
-streamlit == 1.31.0
+streamlit <= 1.31.0
 faiss-cpu
 tiktoken == 0.5.2
 huggingface-hub == 0.20.3
-pypdf == 0.1.14
+pypdf <= 0.1.14
 llama-cpp-python == 0.1.14
