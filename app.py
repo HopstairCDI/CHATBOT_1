@@ -1,5 +1,3 @@
-
-
 import streamlit as st
 from langchain.embeddings import SentenceTransformerEmbeddings
 from streamlit_chat import message
@@ -17,7 +15,7 @@ import tempfile
 from langchain.chains.question_answering import load_qa_chain
 from langchain import HuggingFaceHub
 from langchain import PromptTemplate, HuggingFaceHub, LLMChain
-from langchain_community.llms import PromptTemplate, HuggingFaceHub, LLMChain
+#from langchain_community.llms import PromptTemplate, HuggingFaceHub, LLMChain
 
 
 
