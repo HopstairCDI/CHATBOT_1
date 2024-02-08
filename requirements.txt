@@ -7,6 +7,6 @@ streamlit
 faiss-cpu
 tiktoken
 huggingface-hub
-pypdfLoader
+pypdf
 llama-cpp-python
 
