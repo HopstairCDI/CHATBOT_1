@@ -1,15 +1,15 @@
 #chromadb==0.4.22
-langchain>=0.1.5
-torch==2.1.0
-accelerate==0.26.1
+langchain
+torch
+accelerate
 sentence_transformers
-streamlit_chat== 0.1.1
-streamlit==1.31.0
+streamlit_chat
+streamlit
 faiss-cpu
-tiktoken==0.5.2
-huggingface-hub==0.20.3
-pypdf==4.0.1
-llamacpp==0.1.14
+tiktoken
+huggingface-hub
+pypdf
+llama-cpp-python
 #Chroma==0.2.0
 
 #chroma-hnswlib==0.7.3
