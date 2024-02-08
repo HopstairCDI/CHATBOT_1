@@ -4,7 +4,7 @@ torch
 accelerate
 sentence_transformers
 streamlit_chat
-streamlit
+streamlit == 24.0
 faiss-cpu
 tiktoken
 huggingface-hub
