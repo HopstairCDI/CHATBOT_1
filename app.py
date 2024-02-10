@@ -3,6 +3,7 @@ from streamlit_chat import message
 from langchain.chains import ConversationalRetrievalChain
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.llms import LlamaCpp
+from llama_cpp import Llama
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import FAISS
 from langchain.memory import ConversationBufferMemory
@@ -53,7 +54,7 @@ def display_chat_history(chain):
 
 def create_conversational_chain(vector_store):
     # Create llm
-    llm = LlamaCpp(
+    llm = Llama(
     streaming = True,
     model_path="mistral-7b-instruct-v0.1.Q4_K_M.gguf",
     temperature=0.75,
