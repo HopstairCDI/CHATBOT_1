@@ -73,7 +73,7 @@ def create_conversational_chain(vector_store):
 def main():
     # Initialize session state
     initialize_session_state()
-    st.title("AI powered Confidence Catalyst Chatbot :books:")
+    st.title("Hopstair's Confidence Catalyst AI Bot :books:")
     # Initialize Streamlit
     st.sidebar.title("Hopstair's library data is Processing")
     uploaded_files = st.sidebar.file_uploader("Upload Hopstair Data", accept_multiple_files=True)
