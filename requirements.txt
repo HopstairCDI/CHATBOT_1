@@ -107,3 +107,4 @@ zstandard==0.21.0
 pypdfium2==4.15.0
 streamlit-chat==0.1.1
 llamacpp==0.1.14
+llama-cpp-python
