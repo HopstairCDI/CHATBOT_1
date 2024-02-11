@@ -108,4 +108,4 @@ pypdfium2==4.15.0
 streamlit-chat==0.1.1
 llama-cpp==0.1.14
 llama-index
-langchain-community==0.0.19
+langchain_community==0.0.19
