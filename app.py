@@ -53,14 +53,17 @@ def display_chat_history(chain):
 
 def create_conversational_chain(vector_store):
     # Create llm
+    model_url = 'https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF/resolve/main/mistral-7b-instruct-v0.1.Q4_K_M.gguf'
     llm = LlamaCPP(
-    streaming = True,
-    model_url="https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF/resolve/main/mistral-7b-instruct-v0.1.Q4_K_M.gguf",
-    temperature=0.75,
-    top_p=1, 
-    verbose=True,
-    n_ctx=4096
-)
+        model_url=model_url,
+        temperature=0.1,
+        max_new_tokens=256,
+        context_window=3900,
+        model_kwargs={"n_gpu_layers": -1},
+        messages_to_prompt=messages_to_prompt,
+        completion_to_prompt=completion_to_prompt,
+        verbose=True,
+    )
     
     memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
 
