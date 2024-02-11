@@ -53,9 +53,9 @@ def display_chat_history(chain):
 
 def create_conversational_chain(vector_store):
     # Create llm
-    llm = LlamaCpp(
+    llm = LlamaCPP(
     streaming = True,
-    model_path="mistral-7b-instruct-v0.1.Q4_K_M.gguf",
+    model_url="https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF/resolve/main/mistral-7b-instruct-v0.1.Q4_K_M.gguf",
     temperature=0.75,
     top_p=1, 
     verbose=True,
