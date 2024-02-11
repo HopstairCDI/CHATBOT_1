@@ -13,7 +13,6 @@ import tempfile
 
 
 
-
 def initialize_session_state():
     if 'history' not in st.session_state:
         st.session_state['history'] = []
