@@ -7,7 +7,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import FAISS
 from langchain.memory import ConversationBufferMemory
 from langchain.document_loaders import PyPDFLoader
-
+from llama_cpp import Llama
 import os
 import tempfile
 
